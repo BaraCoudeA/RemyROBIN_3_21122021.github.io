@@ -1,0 +1,26 @@
+/*header*/
+.headerimg{
+    justify-content: center;
+    display:flex;
+}
+
+
+
+/*img*/
+.blocrestaurants{
+    width: 100%;
+}
+.indeximg{
+    width: 80%;
+    height: auto;
+}
+
+/*restaurants*/
+.clicrestaurants{
+    display:flex;
+    justify-content: center;
+    width: auto;
+}
+.clicrestaurants p{
+    display: flex;
+}
