@@ -1,3 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap");
+h1 {
+  font-family: Shrikhand;
+  font-size: 24px;
+}
+
+span {
+  font-family: Roboto;
+  font-weight: 300;
+}
+
+header {
+  background-color: #ffff;
+}
+
 body {
   margin: 0;
 }
@@ -35,7 +50,7 @@ header a {
 
 .headerimg {
   display: flex;
-  margin: 20px 0 10px 0;
+  margin: 20px 0 20px 0;
   justify-content: center;
 }
 
@@ -43,29 +58,115 @@ header a {
   display: flex;
   justify-content: center;
   background-color: #eaeaea;
-  height: 40px;
+  height: 60px;
   align-items: center;
+}
+.header_lieu i {
+  padding-right: 16px;
 }
 
 .container_info {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  text-align: center;
-  height: 200px;
+  height: 324px;
   background-color: #f6f6f6;
+}
+.container_info_taille {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.container_info_taille h1 {
+  font-size: 22px;
+  display: flex;
+  width: 70%;
+  font-family: roboto;
+}
+.container_info .h1_placement {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+}
+.container_info_text {
+  font-size: 16px;
+  margin-top: -12px;
+}
+.container_info_btn {
+  margin-top: 48px;
+  font-size: 18px;
+}
+.container_info_btn span {
+  background-color: #FF79DA;
+  padding: 16px 24px 16px 24px;
+  border-radius: 40px;
+  color: #ffff;
 }
 
 .container_fonctionnement {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  height: 280px;
+  height: 400px;
+}
+.container_fonctionnement span {
+  margin: 0 20px 0 20px;
+  padding: 24px 0 24px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  font-size: 18px;
+  width: 300px;
+  font-weight: 400;
+}
+.container_fonctionnement_titre {
+  margin-left: 5%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+.container_fonctionnement_btn {
+  display: flex;
+  flex-direction: column;
+  height: 240px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container_fonctionnement_btn a {
+  width: 100%;
 }
 
-.container_fonctionnement span {
-  margin: 20px 0 20px 0;
+.fonctionnement_size {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0 12px 0;
+}
+
+.fonctionnement_size .fas {
+  margin-right: 12px;
+}
+
+#number1 {
+  border-radius: 100%;
+  color: #ffff;
+  background-color: #9356DC;
+  padding: 4px 8px 4px 8px;
+  margin-left: -12px;
+}
+
+#number2 {
+  border-radius: 100%;
+  color: #ffff;
+  background-color: #9356DC;
+  padding: 4px 8px 4px 8px;
+  margin-left: -12px;
+}
+
+#number3 {
+  border-radius: 100%;
+  color: #ffff;
+  background-color: #9356DC;
+  padding: 4px 8px 4px 8px;
+  margin-left: -12px;
 }
 
 .background_main {
@@ -78,41 +179,88 @@ header a {
   object-fit: cover;
 }
 
-h2 {
+.container_repas_titre {
   text-decoration: underline;
   text-decoration-color: #99E2D0;
+  font-family: roboto;
+  font-size: 18px;
 }
 
-.blocrestaurants {
+.container_restaurants {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #eaeaea;
   width: 100%;
 }
-.blocrestaurants a {
+.container_restaurants a {
   text-decoration: none;
   color: #000000;
+}
+.container_restaurants_titre {
+  display: flex;
+  margin: 20px 0 12px 14%;
+  width: 100%;
+}
+
+.Container_restaurants_liste {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.coeur1 {
+  padding-left: 41%;
+}
+
+.coeur2 {
+  padding-left: 40%;
+}
+
+.coeur3 {
+  padding-left: 49%;
+}
+
+.btn_nouveau {
+  position: absolute;
+  background-color: #99E2D0;
+  font-size: 14px;
+  width: 70px;
+  text-align: center;
+  padding: 8px 0 8px 16px;
+  display: flex;
+  margin-left: 60%;
+  color: #008766;
+}
+
+.margin_clic {
+  margin-left: 12px;
 }
 
 .clicrestaurants {
   display: flex;
   flex-direction: column;
-  height: 250px;
+  height: 220px;
   margin-bottom: 20px;
   width: 100%;
   background-color: #ffff;
+  border-radius: 16px;
 }
 .clicrestaurants span {
-  margin-top: 4px;
+  margin-top: 8px;
+}
+.clicrestaurants i {
+  padding-top: 8px;
+  position: absolute;
 }
 
 .indeximg {
   display: flex;
-  height: 200px;
-  width: 310px;
+  height: 160px;
+  width: 100%;
   object-fit: cover;
   justify-content: center;
+  border-radius: 16px 16px 0 0;
 }
 
 .container_repas {
@@ -129,20 +277,20 @@ h2 {
   margin: 10px 0 10px 0;
   display: flex;
   flex-direction: column;
-  border-color: #000000;
-  border-style: solid;
-  border-width: 2px;
   border-radius: 15px;
   background-color: #ffff;
 }
 .btn_repas span {
   margin: 4px 0 0 8px;
+  font-size: 14px;
+}
+
+.background_color {
+  background-color: #f6f6f6;
 }
 
 .container_btn {
   justify-content: center;
-  align-content: center;
-  align-items: center;
   display: flex;
   background-color: #f6f6f6;
 }
@@ -151,36 +299,59 @@ h2 {
   display: flex;
   margin: 40px 0 40px 0;
   justify-content: center;
-  align-content: center;
   align-items: center;
-  border-color: #000000;
-  border-style: solid;
-  border-width: 2px;
   height: 36px;
   width: 140px;
   background-color: #9356DC;
   border-radius: 60px;
 }
-
 .btn_commander span {
   color: #ffff;
+}
+
+.container_titre {
+  margin: 5%;
+}
+
+.retour {
+  margin-left: 5%;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 footer {
   background-color: #353535;
   padding-bottom: 10px;
   padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+footer a {
+  text-decoration: none;
+  color: #ffff;
+  margin: 4px 0 4px 0;
+}
+footer h2 {
+  color: #ffff;
+  font-family: Shrikhand;
+  font-size: 18px;
+}
+
+.fa-utensils {
+  margin-right: 4px;
+}
+
+.fa-hands-helping {
+  font-size: 10px;
+  margin-right: 4px;
 }
 
 .logofooter {
   height: 20px;
   width: auto;
   margin: 20px 0 0 0;
-}
-
-footer a {
-  text-decoration: none;
-  color: #ffff;
 }
 
 /*# sourceMappingURL=style.css.map */

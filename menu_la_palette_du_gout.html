@@ -7,96 +7,102 @@
         <link rel="stylesheet" media="screen and (min-width: 993px)" href="./assets/css/bigscreen.css" type="text/css" />
         <link rel="stylesheet" media="screen and (min-width: 765px) and (max-width: 992px)" href="./assets/css/mediumscreen.css" type="text/css" />
         <title>ohmyfood - Menu - La palette du goût</title>
+        <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
+        <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet">
+        <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
     </head>
     <body>
         <header>
-             <!-- temporaire -->
-            <a href="index.html"><span>Retour arrière</span></a>
+            <div class="retour">
+                <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+            </div>
             <div class="container_logo">            
                 <img class="logo_img" src="assets/img/logo/ohmyfood.png" alt="ohmyfood_logo">
             </div>
 	    </header>
         <main>
-            <div class="main_img">
-                <img class="img_principal" src="assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="#">
-            </div>
-            <div>
-                <h1>La palette du goût</h1>
-            </div>
-            <div class="container_repas">
-                <div>
-                    <h2>Entrées</h2>
+            <div class="background_color">
+                <div class="main_img">
+                    <img class="img_principal" src="assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="#">
                 </div>
-                <a href="#"><div class="btn_repas">
-                    <span>Fricassée d'escargot</span>
-                    <span>Au piment d'espelette</span>
-                    <span>25€</span>
-                </div></a>
-                <a href="#"><div class="btn_repas">
-                    <span>Foie gras de anard mi-cuit</span>
-                    <span>Et ses copeaux de truffe noire</span>
-                    <span>35€</span>
-                </div></a>
-                <a href="#"><div class="btn_repas">
-                    <span>Oeuf au plat</span>
-                    <span>Assaisonné à la truffe sur lit de ....</span>
-                    <span>20€</span>
-                </div></a>
-            </div>
- 
-            <div class="container_repas">
-                <div>
-                    <h2>Plats</h2>
+                <div class="container_titre">
+                    <h1>La palette du goût</h1>
                 </div>
-                <a href="#"><div class="btn_repas">
-                    <span>Filet de boeuf aux herbes</span>
-                    <span>Accompagné de sa ribambelle de légumes</span>
-                    <span>40€</span>
-                </div></a>
-                <a href="#"><div class="btn_repas">
-                    <span>Parmentier de queue de boeuf</span>
-                    <span>À la truffe noire sur sa purée de panais</span>
-                    <span>35€</span>
-                </div></a>
-                <a href="#"><div class="btn_repas">
-                    <span>Filet de Turbot</span>
-                    <span>Aux agrumes</span>
-                    <span>44€</span>
-                </div></a>
-            </div>
+                <div class="container_repas">
+                    <div class="container_repas_titre">
+                        <span class="container_repas_titre">Entrées</span>
+                    </div>
+                    <a href="#"><div class="btn_repas">
+                        <span class="bold">Fricassée d'escargot</span>
+                        <span>Au piment d'espelette</span>
+                        <span class="bold">25€</span>
+                    </div></a>
+                    <a href="#"><div class="btn_repas">
+                        <span class="bold">Foie gras de anard mi-cuit</span>
+                        <span>Et ses copeaux de truffe noire</span>
+                        <span class="bold">35€</span>
+                    </div></a>
+                    <a href="#"><div class="btn_repas">
+                        <span class="bold">Oeuf au plat</span>
+                        <span>Assaisonné à la truffe sur lit de ....</span>
+                        <span class="bold">20€</span>
+                    </div></a>
+                </div>
+    
+                <div class="container_repas">
+                    <div>
+                        <span class="container_repas_titre">Plats</span>
+                    </div>
+                    <a href="#"><div class="btn_repas">
+                        <span class="bold">Filet de boeuf aux herbes</span>
+                        <span>Accompagné de sa ribambelle de légumes</span>
+                        <span class="bold">40€</span>
+                    </div></a>
+                    <a href="#"><div class="btn_repas">
+                        <span class="bold">Parmentier de queue de boeuf</span>
+                        <span>À la truffe noire sur sa purée de panais</span>
+                        <span class="bold">35€</span>
+                    </div></a>
+                    <a href="#"><div class="btn_repas">
+                        <span class="bold">Filet de Turbot</span>
+                        <span>Aux agrumes</span>
+                        <span class="bold">44€</span>
+                    </div></a>
+                </div>
 
-            <div class="container_repas">
-                <div>
-                    <h2>Desserts</h2>
+                <div class="container_repas">
+                    <div>
+                        <span class="container_repas_titre">Desserts</span>
+                    </div>
+                    <a href="#"><div class="btn_repas">
+                        <span class="bold">Paris-Brest</span>
+                        <span>Revisité</span>
+                        <span class="bold">18€</span>
+                    </div></a>
+                    <a href="#"><div class="btn_repas">
+                        <span class="bold">Macaron au chocolat d'exception</span>
+                        <span>Et glacé à la vanille de madagascar</span>
+                        <span class="bold">22€</span>
+                    </div></a>
+                    <a href="#"><div class="btn_repas">
+                        <span class="bold">Mousse au chocolat</span>
+                        <span>Au piment d'espelette et à la truffe noire</span>
+                        <span class="bold">23€</span>
+                    </div></a>
                 </div>
-                <a href="#"><div class="btn_repas">
-                    <span>Paris-Brest</span>
-                    <span>Revisité</span>
-                    <span>18€</span>
-                </div></a>
-                <a href="#"><div class="btn_repas">
-                    <span>Macaron au chocolat d'exception</span>
-                    <span>Et glacé à la vanille de madagascar</span>
-                    <span>22€</span>
-                </div></a>
-                <a href="#"><div class="btn_repas">
-                    <span>Mousse au chocolat</span>
-                    <span>Au piment d'espelette et à la truffe noire</span>
-                    <span>23€</span>
-                </div></a>
             </div>
         </main>
         <div class="container_btn">
             <a href="#"><div class="btn_commander">
-                <span>Commander</span>
+                <span class="bold">Commander</span>
             </div></a>
         </div>
 	    <footer>
-            <img class="logofooter" src="assets/img/logo/ohmyfood.png" alt="ohmyfood_logo_footer">
-            <a href="#"><p>Proposer un restaurant</p></a>
-            <a href="#"><p>Devenir partenaire</p></a>
-            <a href="#"><p>Mention légales</p></a>
-            <a href="#"><p>Contact</p></a>
+            <h2>ohmyfood</h2>
+            <a href="#"><i class="fas fa-utensils"></i><span class="bold footer"> Proposer un restaurant</span></a>
+            <a href="#"><i class="fas fa-hands-helping"></i><span class="bold"> Devenir partenaire</span></a>
+            <a href="#"><span class="bold">Mention légales</span></a>
+            <a href="#"><span class="bold">Contact</span></a>
 	    </footer>
     </body>
 </html>

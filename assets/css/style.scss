@@ -5,17 +5,38 @@ $gris: #eaeaea;
 $gris_clair: #f6f6f6;
 $white: #ffff;
 $black: #000000;
+$new: #008766;
 @mixin flex-column-center {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
 }
+@mixin font-22px {
+    font-size: 22px;
+}
+@mixin number{
+    border-radius: 100%;
+    color: $white;
+    background-color: $primaire; 
+    padding:4px 8px 4px 8px;
+    margin-left: -12px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap');
 
 
 
+h1{
+    font-family: Shrikhand;
+    font-size: 24px;
+}
 
-
+span {
+    font-family: Roboto;
+    font-weight: 300;
+}
+header{
+    background-color: $white;
+}
 body{
     margin:0;
 }
@@ -50,33 +71,108 @@ header a{
 }
 .headerimg{
     display: flex;
-    margin: 20px 0 10px 0;
+    margin: 20px 0 20px 0;
     justify-content: center;
 }
 .header_lieu{
     display: flex;
     justify-content: center;
     background-color: $gris;
-    height: 40px;
+    height: 60px;
     align-items: center;
+    & i{
+       padding-right: 16px;
+       
+    }
 }
 
 .container_info{
-    display: flex;
-    flex-direction: column;
+    display:flex;
     justify-content: center;
-    text-align: center;
-    height: 200px;
+    height: 324px;
     background-color: $gris_clair;
-}
-.container_fonctionnement{
-    @include flex-column-center;
-    height: 280px;
+    &_taille {
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        & h1{
+            font-size: 22px;
+            display:flex;
+            width: 70%;
+            font-family: roboto;
+        }
+    }
+    .h1_placement{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    &_text{
+        font-size: 16px;
+        margin-top: -12px;
+    }
+    &_btn{
+        margin-top: 48px;
+        font-size: 18px;
+        & span{
+            background-color: $secondaire;
+            padding: 16px 24px 16px 24px;
+            border-radius: 40px;
+            color: $white;
+        }
+    }
 }
 
-.container_fonctionnement span{
-    margin: 20px 0 20px 0;
+.container_fonctionnement{
+    display:flex;
+    flex-direction: column;
+    height: 400px;
+    & span{
+    margin: 0 20px 0 20px;
+    padding: 24px 0 24px;
+    background-color: $gris_clair;
+    border-radius: 20px;
+    font-size: 18px;
+    width: 300px;
+    font-weight: 400;
+    }
+    &_titre{
+        margin-left: 5%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-size: 18px;
+    }
+    &_btn{
+        display:flex;
+        flex-direction: column;
+        height: 240px;
+        justify-content: space-evenly;
+        align-items: center;
+        & a{
+            width: 100%;
+        }
+    }
 }
+.fonctionnement_size{
+    display:flex;
+    justify-content: center;
+    margin:12px 0 12px 0
+}
+.fonctionnement_size .fas{
+    margin-right: 12px;
+}
+#number1{
+    @include number;
+}
+#number2{
+    @include number;
+}
+#number3{
+    @include number;
+}
+
 .background_main{
     background-color: $gris_clair;
 }
@@ -87,13 +183,15 @@ header a{
 }
 
 
-h2{
+.container_repas_titre{
     text-decoration: underline;
     text-decoration-color: $tertiaire;
+    font-family: roboto;
+    font-size: 18px;
 }
 
 
-.blocrestaurants{
+.container_restaurants{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,26 +201,66 @@ h2{
         text-decoration: none;
         color: $black;
     }
+    &_titre{
+        display:flex;
+        margin: 20px 0 12px 14%;
+        width: 100%;
+    }
+}
+.Container_restaurants_liste {
+    display:flex;
+    flex-direction: column;
+    width: 90%;
+}
+.coeur1{
+    padding-left: 41%;
+
+}
+.coeur2{
+    padding-left: 40%;
+}
+.coeur3{
+    padding-left: 49%;
 }
 
+.btn_nouveau{
+    position: absolute;
+    background-color: $tertiaire;
+    font-size: 14px;
+    width: 70px;
+    text-align: center;
+    padding:8px 0 8px 16px;
+    display:flex;
+    margin-left: 60%;
+    color: $new;
+}
+.margin_clic{
+    margin-left: 12px;
+}
 .clicrestaurants{
     display: flex;
     flex-direction: column;
-    height: 250px;
+    height: 220px;
     margin-bottom: 20px;
     width: 100%;
     background-color: $white;
+    border-radius: 16px;
     & span{
-    margin-top: 4px;
+    margin-top: 8px;
+    }
+    & i{
+        padding-top: 8px;
+        position: absolute;
     }
 }
 
 .indeximg{
     display:flex;
-    height: 200px;
-    width:310px;
+    height: 160px;
+    width:100%;
     object-fit:cover;
     justify-content: center;
+    border-radius: 16px 16px 0 0;
 }
 
 .container_repas{
@@ -133,28 +271,27 @@ h2{
     margin: 0 5% 0 5%;
 
 }
+
 .btn_repas{
     height: 70px;
     width: 99%;
     margin:10px 0 10px 0;
     display: flex;
     flex-direction: column;
-    border-color: $black;
-    border-style: solid;
-    border-width: 2px;
     border-radius: 15px;
     background-color: $white;
     & span{
-    margin:4px 0 0 8px
+    margin:4px 0 0 8px;
+    font-size: 14px;
     }
 }
 
-
+.background_color{
+    background-color: $gris_clair;
+}
 
 .container_btn{
     justify-content: center;
-    align-content: center;
-    align-items: center;
     display:flex;
     background-color: $gris_clair;
 }
@@ -162,34 +299,54 @@ h2{
     display:flex;
     margin:40px 0 40px 0;
     justify-content: center;
-    align-content: center;
     align-items: center;
-    border-color: $black;
-    border-style: solid;
-    border-width: 2px;
     height: 36px;
     width: 140px;
     background-color: $primaire ;
     border-radius: 60px;
+    & span{
+        color: $white;
+    }
 }
-.btn_commander span{
-
-    color: $white;
+.container_titre{
+    margin:5%
 }
-
+.retour{
+    margin-left: 5%;
+}
+.bold{
+    font-weight: bold;
+}
 
 footer{
    background-color: rgb(53, 53, 53);
    padding-bottom: 10px;
    padding-left: 20px;
-   
+   display: flex;
+   flex-direction: column;
+   & a{
+        text-decoration: none;
+        color: $white;
+        margin: 4px 0 4px 0;
+   }
+   & h2{
+        color: $white;
+        font-family: Shrikhand;
+        font-size:18px;
+    }
 }
+.fa-utensils{
+    margin-right: 4px;
+}
+.fa-hands-helping{
+    font-size: 10px;
+    margin-right: 4px;
+}
+
+
+
 .logofooter{
     height: 20px;
     width: auto;
     margin: 20px 0 0 0;
-}
-footer a{
-    text-decoration: none;
-    color: $white;
 }
