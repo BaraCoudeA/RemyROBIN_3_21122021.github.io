@@ -492,4 +492,52 @@ footer h2 {
   position: relative;
 }
 
+.loader {
+  border: 16px solid #808080;
+  /* Light grey */
+  border-top: 16px solid #9356DC;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 3s linear;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  margin: -76px 0 0 -54px;
+  animation-duration: 3000ms;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(1080deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    transform: rotate(108deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(540deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: rotate(720deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(1080deg);
+    opacity: 0;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
