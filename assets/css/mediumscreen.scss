@@ -1,0 +1,79 @@
+$primaire: #9356DC;
+$secondaire: #FF79DA;
+$tertiaire: #99E2D0;
+$gris: #eaeaea;
+$gris_clair: #f6f6f6;
+$white: #ffff;
+$black: #000000;
+$new: #008766;
+$icone:#808080;
+
+@mixin degrade{
+    background: linear-gradient(350deg,$primaire,$secondaire)
+}
+@mixin like{
+    float: right;
+    margin-left: auto;
+    margin-right: 5%;
+    font-size: 24px;
+    padding-left: 0px;
+    width: 24px;
+}
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+@mixin font-22px {
+    font-size: 22px;
+}
+@mixin number{
+    border-radius: 100%;
+    color: $white;
+    background-color: $primaire;
+    padding:4px 8px 4px 8px;
+    margin-left: -12px;
+    font-size: 12px;
+    box-shadow: none;
+}
+@mixin shadow{
+    box-shadow: inset 0 0 0 , 4px 4px 10px rgb(198,198,198);
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap');
+
+.container_info{
+    width: 50%;
+    display:flex;
+    height: 350px;
+    border-radius: 0 0 20px 20px;
+    .h1_placement{
+        margin-top: 2%; 
+        text-align: center;
+    }
+    &_btn{
+        margin-top: 80px;
+    }
+    &_text{
+        margin-top: 12px;
+    }
+    &_taille h1{
+        justify-content: center;
+        width: 90%;
+    }
+}
+
+.container_fonctionnement{
+    width: 50%;
+    display:flex;
+    &_titre{
+      margin-top: 2%;  
+      text-align: center;
+    } 
+}
+
+#container_biginfo{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+

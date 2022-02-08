@@ -6,6 +6,29 @@ $gris_clair: #f6f6f6;
 $white: #ffff;
 $black: #000000;
 $new: #008766;
+$icone:#808080;
+
+@mixin degrade{
+    background: linear-gradient(350deg,$primaire,$secondaire)
+}
+
+@mixin scale105{
+    transform: scale(1);
+    transition-duration: 200ms;
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
+@mixin like{
+    float: right;
+    margin-left: auto;
+    margin-right: 5%;
+    font-size: 24px;
+    padding-left: 0px;
+    width: 24px;
+}
+
 @mixin flex-column-center {
     display: flex;
     flex-direction: column;
@@ -17,13 +40,35 @@ $new: #008766;
 @mixin number{
     border-radius: 100%;
     color: $white;
-    background-color: $primaire; 
+    background-color: $primaire;
     padding:4px 8px 4px 8px;
     margin-left: -12px;
+    font-size: 12px;
+    box-shadow: none;
+}
+@mixin shadow{
+    box-shadow: inset 0 0 0 , 4px 4px 10px rgb(198,198,198);
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap');
 
 
+
+
+
+.coeur_title{
+    float: right;
+}
+
+.main_img{
+    height: 170px;
+}
+.background_border{
+    border-style: solid;
+    border-radius: 30px;
+    background-color: $gris_clair;
+    position:relative;
+    border-color: $gris_clair;
+}
 
 h1{
     font-family: Shrikhand;
@@ -89,7 +134,7 @@ header a{
 .container_info{
     display:flex;
     justify-content: center;
-    height: 324px;
+    height: 270px;
     background-color: $gris_clair;
     &_taille {
         width: 100%;
@@ -117,10 +162,12 @@ header a{
         margin-top: 48px;
         font-size: 18px;
         & span{
-            background-color: $secondaire;
+            @include degrade;
             padding: 16px 24px 16px 24px;
             border-radius: 40px;
             color: $white;
+            font-weight: 400;
+            @include shadow;
         }
     }
 }
@@ -130,19 +177,22 @@ header a{
     flex-direction: column;
     height: 400px;
     & span{
-    margin: 0 20px 0 20px;
-    padding: 24px 0 24px;
-    background-color: $gris_clair;
-    border-radius: 20px;
-    font-size: 18px;
-    width: 300px;
-    font-weight: 400;
+        margin: 0 20px 0 30px;
+        padding: 24px 0 24px;
+        background-color: $gris_clair;
+        border-radius: 20px;
+        font-size: 16px;
+        width: 85%;
+        font-weight: bold;
+        @include shadow;
     }
     &_titre{
         margin-left: 5%;
         margin-top: 40px;
         margin-bottom: 40px;
-        font-size: 18px;
+        font-size: 16px;
+        font-family: roboto;
+        
     }
     &_btn{
         display:flex;
@@ -158,11 +208,14 @@ header a{
 .fonctionnement_size{
     display:flex;
     justify-content: center;
-    margin:12px 0 12px 0
+    margin:12px 0 12px 0;
+    & .fas{
+    margin-right: 24px;
+    color: $icone;
+    font-size: 18px;
+    }
 }
-.fonctionnement_size .fas{
-    margin-right: 12px;
-}
+
 #number1{
     @include number;
 }
@@ -183,11 +236,15 @@ header a{
 }
 
 
-.container_repas_titre{
+#entete{
     text-decoration: underline;
     text-decoration-color: $tertiaire;
     font-family: roboto;
     font-size: 18px;
+    display: flex;
+    margin-left: 3%;
+    margin-top: 24px;
+    margin-bottom: 12px;
 }
 
 
@@ -195,7 +252,7 @@ header a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $gris;
+    background-color: $gris_clair;
     width: 100%;
     & a{
         text-decoration: none;
@@ -205,7 +262,9 @@ header a{
         display:flex;
         margin: 20px 0 12px 14%;
         width: 100%;
+        font-family: roboto;
     }
+    
 }
 .Container_restaurants_liste {
     display:flex;
@@ -240,23 +299,25 @@ header a{
 .clicrestaurants{
     display: flex;
     flex-direction: column;
-    height: 220px;
+    height: 240px;
     margin-bottom: 20px;
     width: 100%;
     background-color: $white;
     border-radius: 16px;
+    @include shadow;
     & span{
     margin-top: 8px;
     }
     & i{
         padding-top: 8px;
         position: absolute;
+        font-size: 20px;
     }
 }
 
 .indeximg{
     display:flex;
-    height: 160px;
+    height: 170px;
     width:100%;
     object-fit:cover;
     justify-content: center;
@@ -264,28 +325,40 @@ header a{
 }
 
 .container_repas{
-    width: 90%;
+    width: 97%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 5% 0 5%;
+    margin: 0 0 0 2%;
 
 }
 
 .btn_repas{
-    height: 70px;
+    height: fit-content;
     width: 99%;
     margin:10px 0 10px 0;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
     background-color: $white;
+    padding: 10px 0 10px 0;
+    @include shadow;
     & span{
     margin:4px 0 0 8px;
     font-size: 14px;
     }
 }
+#margin_soustext{
+    margin-left: 12px;
+}
 
+.description{
+    display:flex;
+    justify-content: space-between;
+    .bold{
+        margin-right: 5%;
+    }
+}
 .background_color{
     background-color: $gris_clair;
 }
@@ -293,6 +366,7 @@ header a{
 .container_btn{
     justify-content: center;
     display:flex;
+    height: 150px;
     background-color: $gris_clair;
 }
 .btn_commander{
@@ -300,16 +374,18 @@ header a{
     margin:40px 0 40px 0;
     justify-content: center;
     align-items: center;
-    height: 36px;
-    width: 140px;
-    background-color: $primaire ;
+    height: 40px;
+    width: 160px;
+    @include degrade;
+    @include shadow;
     border-radius: 60px;
     & span{
         color: $white;
+        font-size: 12px;
     }
 }
 .container_titre{
-    margin:5%
+    margin:5%;
 }
 .retour{
     margin-left: 5%;
@@ -328,6 +404,7 @@ footer{
         text-decoration: none;
         color: $white;
         margin: 4px 0 4px 0;
+        font-size: 12px;
    }
    & h2{
         color: $white;
@@ -349,4 +426,59 @@ footer{
     height: 20px;
     width: auto;
     margin: 20px 0 0 0;
+}
+
+
+.container_restaurants{
+    & a{
+        @include scale105;
+    }
+}
+
+.container_info_btn{
+    @include scale105;
+}
+
+.btn_repas{
+    @include scale105;
+}
+.btn_commander{
+    @include scale105;
+}
+
+.animationcoeur{
+    transition-delay: 0;
+    &:hover{
+        background: linear-gradient(90deg,$primaire,$secondaire);
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+    }
+}
+
+
+
+.container_fonctionnement{
+    & a{
+        transform: scale(1);
+        transition-duration: 200ms;
+        &:hover{
+            transform: scale(1.05);
+            color: $primaire;
+        }
+    }
+    & span{
+        transform: background-color 200ms;
+        transition-duration: 200ms;
+        &:hover{
+            background-color: rgba( 147, 86, 220, 0.1);
+        }
+    } 
+    & i{
+        transition-duration: 200ms;
+        &:hover{
+            color: $primaire;
+        }
+    }
 }

@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap");
+.container_info {
+  width: 50%;
+  display: flex;
+  height: 350px;
+  border-radius: 0 0 20px 20px;
+}
+.container_info .h1_placement {
+  margin-top: 2%;
+  text-align: center;
+}
+.container_info_btn {
+  margin-top: 80px;
+}
+.container_info_text {
+  margin-top: 12px;
+}
+.container_info_taille h1 {
+  justify-content: center;
+  width: 90%;
+}
+
+.container_fonctionnement {
+  width: 50%;
+  display: flex;
+}
+.container_fonctionnement_titre {
+  margin-top: 2%;
+  text-align: center;
+}
+
+#container_biginfo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=mediumscreen.css.map */
