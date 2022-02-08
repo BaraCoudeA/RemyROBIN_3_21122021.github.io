@@ -88,7 +88,6 @@ header a {
   background-color: #f6f6f6;
 }
 .container_info_taille {
-  width: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -241,16 +240,12 @@ header a {
   width: 90%;
 }
 
-.coeur1 {
-  padding-left: 41%;
-}
-
-.coeur2 {
-  padding-left: 40%;
-}
-
-.coeur3 {
-  padding-left: 49%;
+.coeur {
+  display: flex;
+  float: right;
+  margin-left: auto;
+  position: relative;
+  margin-right: 5%;
 }
 
 .btn_nouveau {
@@ -261,7 +256,7 @@ header a {
   text-align: center;
   padding: 8px 0 8px 16px;
   display: flex;
-  margin-left: 60%;
+  margin-left: 65%;
   color: #008766;
 }
 
@@ -284,7 +279,7 @@ header a {
 }
 .clicrestaurants i {
   padding-top: 8px;
-  position: absolute;
+  position: relative;
   font-size: 20px;
 }
 
@@ -323,11 +318,11 @@ header a {
 
 #margin_soustext {
   margin-left: 12px;
+  margin-top: -2px;
 }
 
 .description {
   display: flex;
-  justify-content: space-between;
 }
 .description .bold {
   margin-right: 5%;
@@ -469,6 +464,32 @@ footer h2 {
 }
 .container_fonctionnement i:hover {
   color: #9356DC;
+}
+
+#price {
+  float: right;
+  margin-left: auto;
+}
+
+.btn_repas_valide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99E2D0;
+  color: #ffff;
+  width: 1px;
+  margin-top: -31px;
+  margin-bottom: -11px;
+  border-radius: 0 11px 11px 0;
+  transform: scale(1);
+  transition: all 200ms;
+  overflow: hidden;
+}
+.btn_repas_valide:hover {
+  transform: scale(1);
+  transition: all 200ms;
+  width: 50px;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */

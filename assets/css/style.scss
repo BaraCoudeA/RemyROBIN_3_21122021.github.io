@@ -137,7 +137,6 @@ header a{
     height: 270px;
     background-color: $gris_clair;
     &_taille {
-        width: 100%;
         display:flex;
         flex-direction: column;
         text-align: center;
@@ -271,16 +270,14 @@ header a{
     flex-direction: column;
     width: 90%;
 }
-.coeur1{
-    padding-left: 41%;
+.coeur{
+    display: flex;
+    float:right;
+    margin-left: auto;
+    position: relative;
+    margin-right: 5%;
+}
 
-}
-.coeur2{
-    padding-left: 40%;
-}
-.coeur3{
-    padding-left: 49%;
-}
 
 .btn_nouveau{
     position: absolute;
@@ -290,7 +287,7 @@ header a{
     text-align: center;
     padding:8px 0 8px 16px;
     display:flex;
-    margin-left: 60%;
+    margin-left: 65%;
     color: $new;
 }
 .margin_clic{
@@ -310,7 +307,7 @@ header a{
     }
     & i{
         padding-top: 8px;
-        position: absolute;
+        position: relative;
         font-size: 20px;
     }
 }
@@ -350,11 +347,11 @@ header a{
 }
 #margin_soustext{
     margin-left: 12px;
+    margin-top: -2px;
 }
 
 .description{
     display:flex;
-    justify-content: space-between;
     .bold{
         margin-right: 5%;
     }
@@ -481,4 +478,31 @@ footer{
             color: $primaire;
         }
     }
+}
+
+#price{
+    float: right;
+    margin-left: auto;
+}
+.btn_repas{
+    &_valide{    
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $tertiaire;
+        color: $white;
+        width: 1px;
+        margin-top: -31px;
+        margin-bottom: -11px;
+        border-radius: 0 11px 11px 0;
+        transform: scale(1);
+        transition: all 200ms;
+        overflow: hidden;
+        &:hover{
+            transform: scale(1);
+            transition: all 200ms;
+            width: 50px;
+            position:relative;
+        }
+    }  
 }

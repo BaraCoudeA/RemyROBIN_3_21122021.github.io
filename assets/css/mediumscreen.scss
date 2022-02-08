@@ -19,6 +19,13 @@ $icone:#808080;
     padding-left: 0px;
     width: 24px;
 }
+@mixin scale105{
+    transform: scale(1);
+    transition-duration: 200ms;
+    &:hover{
+        transform: scale(1.05);
+    }
+}
 @mixin flex-column-center {
     display: flex;
     flex-direction: column;
@@ -76,4 +83,123 @@ $icone:#808080;
     flex-wrap: wrap;
 }
 
+.container_restaurants{
+    border-radius: 20px;
+    flex-wrap: wrap;
+    .clicrestaurants{
+        height: 380px;
+        width: 330px;
+        .indeximg{
+            height: 310px;
+        }
+    }
+    &_titre{
+        margin:0;
+        justify-content:center ;
+    }
+    & i{
+        position: relative;
+    }
+}
+.Container_restaurants_liste{
+    display:flex;
+    width: 60%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    min-width: 765px;
+    max-width: 992px;
+    .btn_nouveau{
+        margin-left: 220px;
+    }
+}
+.coeur1{ 
+    @include like;
+}
+.coeur2{
+    @include like;
+}
+.coeur3{
+    @include like;
+}
 
+#entete{
+    justify-content: center;
+}
+
+
+.container_repas{
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    height: auto;
+    min-height: 115px;
+    max-height: 200px;
+    width: 100%;
+    flex-wrap: wrap;
+    .btn_repas{
+        margin-top: 30px;
+        width: 315px;
+        margin-right: 12px;
+        margin-left: 12px;
+        min-width: 250px;
+        max-width: 350px;
+    }
+}
+
+
+
+.animationcoeur{
+    transition-delay: 0;
+    &:hover{
+        background: linear-gradient(90deg,$primaire,$secondaire);
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+    }
+}
+
+
+
+.container_fonctionnement{
+    & a{
+        transform: scale(1);
+        transition-duration: 200ms;
+        &:hover{
+            transform: scale(1.05);
+            color: $primaire;
+        }
+    }
+    & span{
+        transform: background-color 200ms;
+        transition-duration: 200ms;
+        &:hover{
+            background-color: rgba( 147, 86, 220, 0.1);
+        }
+    } 
+    & i{
+        transition-duration: 200ms;
+        &:hover{
+            color: $primaire;
+        }
+    }
+}
+
+
+.container_restaurants{
+    & a{
+        @include scale105;
+    }
+}
+
+.container_info_btn{
+    @include scale105;
+}
+
+.btn_repas{
+    @include scale105;
+}
+.btn_commander{
+    @include scale105;
+}

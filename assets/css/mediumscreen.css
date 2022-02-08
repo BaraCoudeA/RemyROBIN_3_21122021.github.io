@@ -34,4 +34,151 @@
   flex-wrap: wrap;
 }
 
+.container_restaurants {
+  border-radius: 20px;
+  flex-wrap: wrap;
+}
+.container_restaurants .clicrestaurants {
+  height: 380px;
+  width: 330px;
+}
+.container_restaurants .clicrestaurants .indeximg {
+  height: 310px;
+}
+.container_restaurants_titre {
+  margin: 0;
+  justify-content: center;
+}
+.container_restaurants i {
+  position: relative;
+}
+
+.Container_restaurants_liste {
+  display: flex;
+  width: 60%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+  min-width: 765px;
+  max-width: 992px;
+}
+.Container_restaurants_liste .btn_nouveau {
+  margin-left: 220px;
+}
+
+.coeur1 {
+  float: right;
+  margin-left: auto;
+  margin-right: 5%;
+  font-size: 24px;
+  padding-left: 0px;
+  width: 24px;
+}
+
+.coeur2 {
+  float: right;
+  margin-left: auto;
+  margin-right: 5%;
+  font-size: 24px;
+  padding-left: 0px;
+  width: 24px;
+}
+
+.coeur3 {
+  float: right;
+  margin-left: auto;
+  margin-right: 5%;
+  font-size: 24px;
+  padding-left: 0px;
+  width: 24px;
+}
+
+#entete {
+  justify-content: center;
+}
+
+.container_repas {
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  height: auto;
+  min-height: 115px;
+  max-height: 200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.container_repas .btn_repas {
+  margin-top: 30px;
+  width: 315px;
+  margin-right: 12px;
+  margin-left: 12px;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+.animationcoeur {
+  transition-delay: 0;
+}
+.animationcoeur:hover {
+  background: linear-gradient(90deg, #9356DC, #FF79DA);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.container_fonctionnement a {
+  transform: scale(1);
+  transition-duration: 200ms;
+}
+.container_fonctionnement a:hover {
+  transform: scale(1.05);
+  color: #9356DC;
+}
+.container_fonctionnement span {
+  transform: background-color 200ms;
+  transition-duration: 200ms;
+}
+.container_fonctionnement span:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+.container_fonctionnement i {
+  transition-duration: 200ms;
+}
+.container_fonctionnement i:hover {
+  color: #9356DC;
+}
+
+.container_restaurants a {
+  transform: scale(1);
+  transition-duration: 200ms;
+}
+.container_restaurants a:hover {
+  transform: scale(1.05);
+}
+
+.container_info_btn {
+  transform: scale(1);
+  transition-duration: 200ms;
+}
+.container_info_btn:hover {
+  transform: scale(1.05);
+}
+
+.btn_repas {
+  transform: scale(1);
+  transition-duration: 200ms;
+}
+.btn_repas:hover {
+  transform: scale(1.05);
+}
+
+.btn_commander {
+  transform: scale(1);
+  transition-duration: 200ms;
+}
+.btn_commander:hover {
+  transform: scale(1.05);
+}
+
 /*# sourceMappingURL=mediumscreen.css.map */
