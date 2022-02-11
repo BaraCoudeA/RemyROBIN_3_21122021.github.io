@@ -28,6 +28,9 @@
   margin-top: 2%;
   text-align: center;
 }
+.container_fonctionnement span {
+  width: 400px;
+}
 
 #container_biginfo {
   display: flex;

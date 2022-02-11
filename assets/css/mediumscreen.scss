@@ -75,7 +75,11 @@ $icone:#808080;
     &_titre{
       margin-top: 2%;  
       text-align: center;
-    } 
+
+    }       
+    & span{
+          width: 400px;
+      }
 }
 
 #container_biginfo{

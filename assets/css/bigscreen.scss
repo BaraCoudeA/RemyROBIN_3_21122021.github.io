@@ -50,6 +50,15 @@ $icone:#808080;
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap');
 
+.background_border{
+    width: 70%;
+    left:15%;
+    border-radius: 30px 30px 0 0;
+}
+.background_color{
+    background-color: $white;
+}
+
 .container_info{
     width: 50%;
     display:flex;
@@ -78,6 +87,9 @@ $icone:#808080;
       margin-top: 2%;  
       text-align: center;
     } 
+    & span{
+        width: 400px;
+    }
 }
 
 #container_biginfo{
@@ -130,6 +142,11 @@ $icone:#808080;
 }
 
 
+.container_titre{
+    justify-content: center;
+    display: flex;
+}
+
 .container_repas{
     flex-direction: row;
     justify-content: center;
@@ -152,6 +169,7 @@ $icone:#808080;
 
 
 .animationcoeur{
+    margin-left: 48px;
     transition-delay: 0;
     &:hover{
         background: linear-gradient(90deg,$primaire,$secondaire);
