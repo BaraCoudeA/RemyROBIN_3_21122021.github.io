@@ -137,8 +137,9 @@ $icone:#808080;
     @include like;
 }
 
-#entete{
+.entete{
     justify-content: center;
+    margin-left: 0;
 }
 
 
@@ -156,6 +157,7 @@ $icone:#808080;
     max-height: 200px;
     width: 100%;
     flex-wrap: wrap;
+    display: flex;
     .btn_repas{
         margin-top: 30px;
         width: 315px;

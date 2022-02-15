@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap");
+h4 {
+  font-family: roboto;
+}
+
+p {
+  font-family: rooto;
+}
+
 .coeur_title {
   float: right;
 }
@@ -205,7 +213,7 @@ header a {
   object-fit: cover;
 }
 
-#entete {
+.entete {
   text-decoration: underline;
   text-decoration-color: #99E2D0;
   font-family: roboto;
@@ -294,22 +302,20 @@ header a {
 
 .container_repas {
   width: 97%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin: 0 0 0 2%;
 }
 
 .btn_repas {
   height: fit-content;
-  width: 99%;
+  width: 94%;
   margin: 10px 0 10px 0;
   display: flex;
-  flex-direction: column;
   border-radius: 15px;
   background-color: #ffff;
-  padding: 10px 0 10px 0;
+  padding: 10px;
   box-shadow: inset 0 0 0, 4px 4px 10px #c6c6c6;
+  cursor: pointer;
+  overflow: hidden;
 }
 .btn_repas span {
   margin: 4px 0 0 8px;
@@ -322,10 +328,25 @@ header a {
 }
 
 .description {
-  display: flex;
+  flex: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.description .bold {
-  margin-right: 5%;
+.description_titre {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 14px;
+}
+.description_ingredient {
+  margin: 0;
+  font-family: roboto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 12px;
 }
 
 .background_color {
@@ -379,6 +400,9 @@ footer a {
   color: #ffff;
   margin: 4px 0 4px 0;
   font-size: 12px;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 footer h2 {
   color: #ffff;
@@ -434,16 +458,34 @@ footer h2 {
 }
 
 .animationcoeur {
-  transition-delay: 0;
+  transition-delay: 0.01s;
+  animation-fill-mode: both;
 }
 .animationcoeur:hover {
   background: linear-gradient(90deg, #9356DC, #FF79DA);
+  font-weight: 800;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation: coeur 1s;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 800;
 }
 
+@keyframes coeur {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    opacity: 0.5;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    animation-timing-function: ease-in-out;
+  }
+}
 .container_fonctionnement a {
   transform: scale(1);
   transition-duration: 200ms;
@@ -466,35 +508,71 @@ footer h2 {
   color: #9356DC;
 }
 
-#price {
-  float: right;
-  margin-left: auto;
-}
-
 .btn_repas_valide {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #99E2D0;
   color: #ffff;
-  width: 1px;
-  margin-top: -31px;
-  margin-bottom: -11px;
+  width: 60px;
+  height: 60px;
   border-radius: 0 11px 11px 0;
-  transform: scale(1);
-  transition: all 200ms;
   overflow: hidden;
+  font-size: 20px;
 }
 .btn_repas_valide:hover {
   transform: scale(1);
   transition: all 200ms;
-  width: 50px;
-  position: relative;
+  width: 60px;
+}
+
+.price {
+  margin-right: 5%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.animationcheck {
+  height: 0px;
+  margin-top: -14px;
+  margin-right: -70px;
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+
+.description_ingredient {
+  font-family: roboto;
 }
 
 .loader {
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffff;
+  position: fixed;
+  animation: loader 0.01s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  z-index: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes loader {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0.5;
+  }
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+  }
+}
+.loader_container {
   border: 16px solid #808080;
-  /* Light grey */
   border-top: 16px solid #9356DC;
   border-radius: 50%;
   width: 80px;
@@ -538,6 +616,14 @@ footer h2 {
     transform: rotate(1080deg);
     opacity: 0;
   }
+}
+.description :hover + .animationcheck {
+  transform: translateX(60px);
+}
+
+.btn_repas:hover .animationcheck {
+  transform: translateX(-60px);
+  margin-left: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */

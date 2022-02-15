@@ -106,8 +106,9 @@
   width: 24px;
 }
 
-#entete {
+.entete {
   justify-content: center;
+  margin-left: 0;
 }
 
 .container_titre {
@@ -124,6 +125,7 @@
   max-height: 200px;
   width: 100%;
   flex-wrap: wrap;
+  display: flex;
 }
 .container_repas .btn_repas {
   margin-top: 30px;

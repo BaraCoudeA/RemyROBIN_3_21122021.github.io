@@ -53,7 +53,12 @@ $icone:#808080;
 
 
 
-
+h4{
+    font-family: roboto;
+}
+p{
+    font-family: rooto;
+}
 
 .coeur_title{
     float: right;
@@ -235,7 +240,7 @@ header a{
 }
 
 
-#entete{
+.entete{
     text-decoration: underline;
     text-decoration-color: $tertiaire;
     font-family: roboto;
@@ -323,26 +328,25 @@ header a{
 
 .container_repas{
     width: 97%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     margin: 0 0 0 2%;
 
 }
 
 .btn_repas{
     height: fit-content;
-    width: 99%;
+    width: 94%;
     margin:10px 0 10px 0;
     display: flex;
-    flex-direction: column;
     border-radius: 15px;
     background-color: $white;
-    padding: 10px 0 10px 0;
+    padding: 10px;
     @include shadow;
+    cursor: pointer;
+    overflow: hidden;
     & span{
     margin:4px 0 0 8px;
     font-size: 14px;
+
     }
 }
 #margin_soustext{
@@ -351,9 +355,24 @@ header a{
 }
 
 .description{
-    display:flex;
-    .bold{
-        margin-right: 5%;
+    flex: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    &_titre{
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 14px;
+    }
+    &_ingredient{
+        margin: 0;
+        font-family: roboto;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 12px;
     }
 }
 .background_color{
@@ -402,6 +421,9 @@ footer{
         color: $white;
         margin: 4px 0 4px 0;
         font-size: 12px;
+        &:hover{
+            text-decoration: underline;
+        }
    }
    & h2{
         color: $white;
@@ -444,14 +466,27 @@ footer{
 }
 
 .animationcoeur{
-    transition-delay: 0;
+    transition-delay: 0.01s;
+    animation-fill-mode: both;
     &:hover{
         background: linear-gradient(90deg,$primaire,$secondaire);
+        font-weight: 800;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation: coeur 1s;
         background-clip: border-box;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-weight: 800;
     }
+}
+@keyframes coeur{
+    0%{opacity: 0;
+        animation-timing-function: ease-in-out;}
+    50%{opacity: 0.5;
+        animation-timing-function: ease-in-out;}
+    100%{opacity:1;
+        animation-timing-function: ease-in-out;}
+
 }
 
 
@@ -480,10 +515,9 @@ footer{
     }
 }
 
-#price{
-    float: right;
-    margin-left: auto;
-}
+
+
+
 .btn_repas{
     &_valide{    
         display:flex;
@@ -491,28 +525,80 @@ footer{
         justify-content: center;
         background-color: $tertiaire;
         color: $white;
-        width: 1px;
-        margin-top: -31px;
-        margin-bottom: -11px;
+        width: 60px;
+        height: 60px;
         border-radius: 0 11px 11px 0;
-        transform: scale(1);
-        transition: all 200ms;
         overflow: hidden;
+        font-size: 20px;
         &:hover{
             transform: scale(1);
             transition: all 200ms;
-            width: 50px;
-            position:relative;
-        }      
+            width: 60px;
+
+        }     
     }  
+}
+.price{
+    margin-right: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.animationcheck{
+    height: 0px;
+    margin-top: -14px;
+    margin-right: -70px;
+    transform: rotate(360deg);
+    transition-duration: .5s;
+}
+
+
+
+
+.description_ingredient{
+    font-family: roboto;
+
+}
+.loader{
+    height: 100%;
+    top:0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    position: fixed;
+    animation: loader 0.01s;
+    animation-delay: 3s ;
+    animation-fill-mode: both;
+    z-index: 1;
+    animation-timing-function: ease-in-out;
+    
+}
+
+
+
+
+@keyframes loader {
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0.5;
+    }
+    100% {
+        animation-timing-function: ease-out;
+        opacity: 0;
+        height: 0px;
+        width: 0px;
+    }
+
 }
 
 
 
 
 
-.loader {
-    border: 16px solid $icone; /* Light grey */
+
+.loader_container {
+    border: 16px solid $icone;
     border-top: 16px solid $primaire;
     border-radius: 50%;
     width: 80px;
@@ -524,9 +610,7 @@ footer{
     z-index: 1;
     margin: -76px 0 0 -54px;
     animation-duration: 3000ms;
-    animation-fill-mode: forwards;
-
-    
+    animation-fill-mode: forwards;  
 }
 
   
@@ -558,3 +642,15 @@ footer{
     }
       
   }
+
+
+.description :hover + .animationcheck{
+    transform: translateX(60px) ;
+}
+
+.btn_repas:hover{
+    .animationcheck{
+        transform: translateX(-60px);
+        margin-left: 60px;
+    }
+}
