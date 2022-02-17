@@ -122,7 +122,7 @@
 }
 
 .animationcoeur {
-  transition-delay: 0;
+  transition-delay: 0.01s;
 }
 .animationcoeur:hover {
   background: linear-gradient(90deg, #9356DC, #FF79DA);
@@ -141,7 +141,6 @@
   color: #9356DC;
 }
 .container_fonctionnement span {
-  transform: background-color 200ms;
   transition-duration: 200ms;
 }
 .container_fonctionnement span:hover {

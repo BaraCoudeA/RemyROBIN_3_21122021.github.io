@@ -156,7 +156,7 @@ $icone:#808080;
 
 
 .animationcoeur{
-    transition-delay: 0;
+    transition-delay: 0.01s;
     &:hover{
         background: linear-gradient(90deg,$primaire,$secondaire);
         background-clip: border-box;
@@ -178,7 +178,6 @@ $icone:#808080;
         }
     }
     & span{
-        transform: background-color 200ms;
         transition-duration: 200ms;
         &:hover{
             background-color: rgba( 147, 86, 220, 0.1);

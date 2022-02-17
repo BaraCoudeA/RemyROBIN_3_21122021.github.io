@@ -327,6 +327,21 @@ header a {
   margin-top: -2px;
 }
 
+#margin_soustext2 {
+  margin-left: 12px;
+  margin-top: -2px;
+}
+
+#margin_soustext3 {
+  margin-left: 12px;
+  margin-top: -2px;
+}
+
+#margin_soustext4 {
+  margin-left: 12px;
+  margin-top: -2px;
+}
+
 .description {
   flex: 1;
   white-space: nowrap;
@@ -496,7 +511,6 @@ footer h2 {
   color: #9356DC;
 }
 .container_fonctionnement span {
-  transform: background-color 200ms;
   transition-duration: 200ms;
 }
 .container_fonctionnement span:hover {
