@@ -25,7 +25,10 @@ $icone:#808080;
         transform: scale(1.05);
     }
 }
-
+@mixin marginsoustext {
+    margin-left: 12px;
+    margin-top: -2px;
+}
 @mixin like{
     float: right;
     margin-left: auto;
@@ -356,8 +359,16 @@ header a{
     }
 }
 #margin_soustext{
-    margin-left: 12px;
-    margin-top: -2px;
+ @include marginsoustext;
+}
+#margin_soustext2{
+    @include marginsoustext;
+}
+#margin_soustext3{
+    @include marginsoustext;
+}
+#margin_soustext4{
+    @include marginsoustext;
 }
 
 .description{
