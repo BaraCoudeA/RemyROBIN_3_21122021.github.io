@@ -11,7 +11,13 @@ $icone:#808080;
 @mixin degrade{
     background: linear-gradient(350deg,$primaire,$secondaire)
 }
-
+@mixin apparission{
+    animation-name: delay;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+}
 @mixin scale105{
     transform: scale(1);
     transition-duration: 200ms;
@@ -335,11 +341,11 @@ header a{
 .btn_repas{
     height: fit-content;
     width: 94%;
-    margin:10px 0 10px 0;
+    margin:14px 0 14px 0;
     display: flex;
     border-radius: 15px;
     background-color: $white;
-    padding: 10px;
+    padding: 14px 10px 14px 10px;
     @include shadow;
     cursor: pointer;
     overflow: hidden;
@@ -429,6 +435,7 @@ footer{
         color: $white;
         font-family: Shrikhand;
         font-size:18px;
+        font-weight: 100;
     }
 }
 .fa-utensils{
@@ -580,11 +587,9 @@ footer{
 
 @keyframes loader {
     0% {
-        animation-timing-function: ease-in;
         opacity: 0.5;
     }
     100% {
-        animation-timing-function: ease-out;
         opacity: 0;
         height: 0px;
         width: 0px;
@@ -607,7 +612,7 @@ footer{
     position: fixed;
     left: 50%;
     top: 50%;
-    z-index: 1;
+    z-index: 1000;
     margin: -76px 0 0 -54px;
     animation-duration: 3000ms;
     animation-fill-mode: forwards;  
@@ -630,11 +635,11 @@ footer{
     }
     50% { 
     transform: rotate(540deg);
-    opacity: 0.75;
+    opacity: 1;
     }
     80% { 
         transform: rotate(720deg);
-        opacity: 0.5;
+        opacity: 0.75;
     }
     100% { 
     transform: rotate(1080deg);
@@ -644,13 +649,43 @@ footer{
   }
 
 
-.description :hover + .animationcheck{
-    transform: translateX(60px) ;
-}
+
 
 .btn_repas:hover{
     .animationcheck{
         transform: translateX(-60px);
         margin-left: 60px;
+    }        
+    .fa-check-circle{
+        animation-duration: 0.5s;
+        animation-delay: 0.01s;
+        animation: check 0.5s linear;
+        animation-fill-mode: both;
     }
+}
+
+@keyframes check {
+    0%{transform: rotate(180deg);}
+    100%{transform : rotate(360deg)}
+}
+
+.delay_1{
+    animation-delay: 0s;
+    @include apparission;
+}
+
+.delay_2{
+    animation-delay: 0.5s;
+    @include apparission;
+}
+
+.delay_3{
+    animation-delay: 1s;
+    @include apparission;
+}
+
+@keyframes delay{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+    
 }
