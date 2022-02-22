@@ -17,6 +17,7 @@ $icone:#808080;
     animation-fill-mode: both;
     animation-timing-function: ease-in-out;
     animation-duration: 1s;
+    
 }
 @mixin scale105{
     transform: scale(1);
@@ -338,7 +339,6 @@ header a{
 .container_repas{
     width: 97%;
     margin: 0 0 0 2%;
-
 }
 
 .btn_repas{
@@ -683,20 +683,26 @@ footer{
 .delay_1{
     animation-delay: 0s;
     @include apparission;
+
+
 }
 
 .delay_2{
-    animation-delay: 0.5s;
+    animation-delay: 0.25s;
     @include apparission;
 }
 
 .delay_3{
-    animation-delay: 1s;
+    animation-delay: 0.5s;
     @include apparission;
 }
 
 @keyframes delay{
-    0%{opacity: 0;}
+    0%{opacity: 0;
+        transform:translateY(40px) ;}
+    70%{
+        opacity: 0.7;transform:translateY(0px);}
     100%{opacity: 1;}
+
     
 }

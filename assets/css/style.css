@@ -660,7 +660,7 @@ footer h2 {
 }
 
 .delay_2 {
-  animation-delay: 0.5s;
+  animation-delay: 0.25s;
   animation-name: delay;
   animation-iteration-count: 1;
   animation-fill-mode: both;
@@ -669,7 +669,7 @@ footer h2 {
 }
 
 .delay_3 {
-  animation-delay: 1s;
+  animation-delay: 0.5s;
   animation-name: delay;
   animation-iteration-count: 1;
   animation-fill-mode: both;
@@ -680,6 +680,11 @@ footer h2 {
 @keyframes delay {
   0% {
     opacity: 0;
+    transform: translateY(40px);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translateY(0px);
   }
   100% {
     opacity: 1;
